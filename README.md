@@ -16,8 +16,8 @@ A classic **Tic Tac Toe (X & O)** game built using **HTML, CSS, and JavaScript**
 - Reset game functionality
 
 ## 📸 Screenshot
+[Screenshot 2025-07-06 103400](https://github.com/user-attachments/assets/e5265a75-4755-4883-b7b4-8b736b391dfd)
 
-![Tic Tac Toe Screenshot](./screenshot.png) <!-- Add your own screenshot file -->
 
 ## 🚀 Getting Started
 
@@ -49,6 +49,7 @@ This project is open source and free to use.
 Enjoy the game and feel free to contribute! 🧠✌️
 
 
+##github clone web:
 
-
+https://kavy-borad.github.io/classic-xo/
 
