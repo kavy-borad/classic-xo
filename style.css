@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0c3fc 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+}
+
+
+.container {
+  height: 70vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  font-size: 8vmin;
+  color: #121e2a;
+  background-color: #e0c0a3;
+  transition: background 0.3s, transform 0.15s, color 0.2s;
+  touch-action: manipulation;
+}
+
+.box:hover {
+  background-color: #ffe0b2;
+}
+
+.box:active,
+.box:focus {
+  background-color: #4b3411;
+  transform: scale(1.07) rotate(-2deg);
+  outline: none;
+}
+
+.box.boxX:hover {
+  color: #2c94c4;
+}
+.box.boxO:hover {
+  color: #ca5f2d;
+}
+
+
+@media (max-width: 600px) {
+  .box {
+    height: 24vw;
+    width: 24vw;
+    font-size: 12vw;
+  }
+}
+
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #003049;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+}
+
+#reset-btn:hover {
+  background-color: #2c94c4;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+}
+
+#new-btn:hover {
+  background-color: #2c94c4;
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+#msg {
+  color: #ca5f2d;
+  font-size: 5vmin;
+  animation: msgPopMove 0.7s cubic-bezier(0.23, 1.15, 0.32, 1) both;
+  position: relative;
+}
+
+@keyframes msgPopMove {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.7) rotate(-5deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.1) rotate(2deg);
+  }
+  80% {
+    transform: translateY(5px) scale(0.95) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.boxO {
+  color: #fffbe7;
+  background: linear-gradient(135deg, #ffb347 0%, #ffcc80 100%);
+  box-shadow: 0 0 1.5rem 0.2rem rgba(255, 179, 71, 0.3);
+  border: 2px solid #ffb347;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+h1 {
+  font: 3rem 'segoe ui', sans-serif;
+  color: #003049;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+h1:hover {
+  color: #2c94c4;
+  transform: translateY(-6px) scale(1.05) rotate(-2deg);
+}
